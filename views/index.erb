@@ -1,0 +1,17 @@
+<html>
+   <head></head>
+   <body>
+     <h1>Welcome to Chitter!</h1>
+     <h2>This is my first comment</h2>
+     <% @peeps.reverse.each do |peep| %>
+     <div>
+       Name:  <%= peep.name %>
+       Message: <%= peep.message %>
+       User: <a href="/user/<%= peep.user_id%>"><%= @user.find(peep.user_id).name %></a>
+       Time: <%= peep.time %>
+     </div>
+     <% end %>
+       <a href="/users/new">New User</a>
+       <a href="/peeps/new">New Post</a>
+   </body>
+ </html>

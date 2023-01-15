@@ -1,0 +1,13 @@
+<html>
+<head></head>
+<body>
+  <h1><%= @user_name %>'s Peeps</h1>
+  <% @peeps.reverse.each do |peep| %>
+  <div>
+    Message: <%= peep.message %>
+    Time: <%= peep.time %>
+    User_id: <%= peep.user_id %>
+  </div>
+  <% end %>
+</body>
+</html>
